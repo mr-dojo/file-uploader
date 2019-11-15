@@ -10,8 +10,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: '',
-      filterOption: 'All'
+      searchTerm: 'cats',
+      filterOption: 'Uploaded'
     };
   }
   render() {
@@ -19,12 +19,12 @@ export default class App extends Component {
       <div className="App">
         <SearchBar
           searchTerm={this.state.searchTerm}
-          filterOption={this.state.filterOptions}
+          filterOption={this.state.filterOption}
         />
         <FilterableList
           files={this.props.files}  
           searchTerm={this.state.searchTerm}
-          filterOption={this.state.filterOptions}
+          filterOption={this.state.filterOption}
         />
       </div>
     );
