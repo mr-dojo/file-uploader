@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import SearchBar from './SearchBar/SearchBar';
 import FilterableList from './FilterableList/FilterableList';
 
 class App extends Component {
+  static defaultProps = {
+    files: [],
+  }
   render() {
     return (
       <div className="App">
