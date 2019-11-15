@@ -8,8 +8,11 @@ class SearchBox extends Component {
     return (
       <form className="SearchBox">
         <FontAwesomeIcon icon={faSearch}/>
-        <input placeholder="Search term" value={this.props.searchTerm}/>
-        <button type='submit'>Filter</button>
+        <input 
+          placeholder="Search term"
+          value={this.props.searchTerm}
+          onChange={e => this.props.handleUpdate(e.target.value)}
+        />
       </form>   
     );
   }

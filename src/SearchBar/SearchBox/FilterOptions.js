@@ -13,6 +13,7 @@ class FilterOptions extends Component {
               value="All" 
               id="filter_all" 
               name="filter"
+              onChange={e => this.props.handleFilter(e.target.value)}
             />
             All
           </label>
@@ -25,6 +26,7 @@ class FilterOptions extends Component {
               value="Uploaded" 
               id="filter_uploaded" 
               name="filter"
+              onChange={e => this.props.handleFilter(e.target.value)}
             />
             Uploaded
           </label>
@@ -37,6 +39,7 @@ class FilterOptions extends Component {
               value="Synced" 
               id="filter_synced" 
               name="filter"
+              onChange={e => this.props.handleFilter(e.target.value)}
             />
             Synced
           </label>
@@ -49,6 +52,7 @@ class FilterOptions extends Component {
               value="New" 
               id="filter_new" 
               name="filter"
+              onChange={e => this.props.handleFilter(e.target.value)}
             />
             New
           </label>

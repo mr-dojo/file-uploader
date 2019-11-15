@@ -3,7 +3,18 @@ import './App.css';
 import SearchBar from './SearchBar/SearchBar';
 import FilterableList from './FilterableList/FilterableList';
 
+
 export default class App extends Component {
+  updateSearchTerm(term) {
+    this.setState({
+      searchTerm: term
+    })
+  }
+  updateFilterOption(option) {
+    this.setState({
+      filterOption: option
+    })
+  }
   static defaultProps = {
     files: [],
   }
@@ -20,6 +31,8 @@ export default class App extends Component {
         <SearchBar
           searchTerm={this.state.searchTerm}
           filterOption={this.state.filterOption}
+          handleUpdate={term => this.updateSearchTerm(term)}
+          handleFilter={option => this.updateFilterOption(option)}
         />
         <FilterableList
           files={this.props.files}  
